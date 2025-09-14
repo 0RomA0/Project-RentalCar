@@ -1,0 +1,74 @@
+.container {
+    background-image: url("../../public/Picture\ 1x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 700px;
+    margin: 0;
+    margin-top: 4px;
+}
+
+@media (min-resolution: 192dpi),(min-resolution: 2dppx) {
+    .container {
+        background-image: url("../../public/Picture\ 2x.jpg");
+    }
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 436px 328px 60px;
+}
+
+.title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 120%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.text {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.btn {
+    border-radius: 12px;
+    padding: 12px 99px;
+    width: auto;
+    height: 44px;
+    background: #3470ff;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.btn:hover, .btn:focus {
+    background-color: #0b44cd;
+}

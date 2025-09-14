@@ -1,0 +1,254 @@
+.container {
+    width: 1440px;
+    display: flex;
+    align-items: flex-start;
+    padding: 84px 120px;
+    
+}
+
+
+.containerImgForm{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.img {
+    border-radius: 19px;
+    width: 640px;
+    height: 512px;
+    object-fit: cover;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 72px;
+    margin-top: 20px;
+}
+
+.descrCarContainer {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    text-align: center;
+    color: #101828;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+}
+
+
+.brandText {
+    font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+    
+        /* line-height: 32px; */
+        line-height: 133%;
+        text-align: center;
+        color: #101828;
+}
+
+
+.modelText {
+
+}
+
+
+.addressInfo {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.address,
+.mileage {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #101828;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: #101828;
+    flex-shrink: 0;
+}
+
+.price {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    color: #3470ff;
+}
+
+
+.desrcCar {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #101828;
+    margin-top: 32px;
+    margin-bottom: 88px;
+}
+
+
+.conditions {
+    margin-bottom: 110px;
+}
+
+
+.itemCond {
+    width: 488px;
+    height: 20px;
+}
+
+.specific {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+    color: #101828;
+    margin-bottom: 110px;
+}
+
+.specific p,
+.conditions p,
+.extra p
+{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #101828;
+}
+
+
+.specific h3,
+.conditions h3,
+.extra h3 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #101828;
+    margin-bottom: 20px;
+}
+
+.conditions ul,
+.extra ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.conditions li,
+.extra li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+}
+
+
+
+
+/* FormContainer */
+.formWrapper {
+    border: 1px solid #dadde1;
+    border-radius: 10px;
+    padding: 32px;
+    width: 640px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.formTitle {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #101828;
+    margin-bottom: 8px;
+}
+
+
+.formSubtitle {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #8d929a;
+    margin-bottom: 24px;
+}
+
+
+
+/* Loader */
+.loaderWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: no-repeat radial-gradient(farthest-side, #3470ff 92%, #0000);
+    background:
+        var(--c) 50% 0,
+        var(--c) 50% 100%,
+        var(--c) 100% 50%,
+        var(--c) 0 50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+}
+
+.loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear
+}
+
+@keyframes l12 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}

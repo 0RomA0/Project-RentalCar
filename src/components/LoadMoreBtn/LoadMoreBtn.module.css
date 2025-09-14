@@ -1,0 +1,21 @@
+.loadMoreBtn {
+    border: 1px solid #3470ff;
+    border-radius: 12px;
+    padding: 12px 36px;
+    width: 156px;
+    height: 44px;
+    cursor: pointer;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    color: #101828;
+    margin: 0 auto;
+}
+
+
+.loadMoreBtn:hover {
+    border: 1px solid #073194;
+    background-color: #e0dfdf;
+}

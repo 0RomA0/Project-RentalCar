@@ -1,0 +1,42 @@
+.div {
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.title {
+    color: #871d1d;
+    margin-bottom: 10px;
+}
+
+.text {
+    color: #871d1d;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.btn {
+    border-radius: 12px;
+    padding: 12px 95px;
+    width: 356px;
+    height: 44px;
+    background: #3470ff;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.btn:hover,
+.btn:focus {
+    background-color: #0b44cd;
+}

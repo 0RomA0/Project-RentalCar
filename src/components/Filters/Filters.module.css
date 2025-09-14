@@ -1,0 +1,168 @@
+.filterContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+
+.icon {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    width: 13px;
+    height: 7px;
+    background: none;
+}
+
+
+
+.selectWrapper {
+    position: relative;
+    width: 204px;
+}
+
+
+.selectHeader {
+    border-radius: 12px;
+    padding: 12px 16px;
+    width: 100%;
+    height: 44px;
+    background: #f7f7f7;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #101828;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.selectList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 188px;
+    border: 1px solid #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.02);
+    background: #fff;
+    overflow-y: auto;
+    z-index: 10;
+    list-style: none;
+    padding: 8px 0;
+    margin: 4px 0 0 0;
+}
+
+
+.selectList li {
+    padding: 8px 16px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #8d929a;
+}
+
+
+.selectList li.active {
+    color: #101828;
+}
+
+
+.selectList li:hover {
+    background-color: #f0f0f0;
+}
+
+
+.inputContainer {
+    display: flex;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.inputWrapper input {
+    border-radius: 0 12px 12px 0;
+    width: 160px;
+    height: 44px;
+    background: #f7f7f7;
+    padding: 0 12px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #101828;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+}
+
+.inputWrapper .inputFrom {
+    padding-left: 60px;
+}
+
+
+.inputWrapper:first-child input {
+    border-radius: 12px 0 0 12px;
+    border-right: 1px solid #dadde1;
+}
+
+.inputWrapper:last-child input {
+    border-radius: 0 12px 12px 0;
+}
+
+.inputLabel {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #101828;
+    pointer-events: none;
+}
+
+.label {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8d929a;
+    margin-bottom: 8px;
+    display: block;
+    
+}
+
+
+
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 50px;
+    width: 156px;
+    height: 44px;
+    background-color: #3470ff;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: #0b44cd;
+}

@@ -1,0 +1,143 @@
+.card {
+    width: 276px;
+    height: 424px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img {
+    border-radius: 14px;
+    width: 276px;
+    height: 268px;
+    object-fit: cover;
+}
+
+.imgWrapper {
+    position: relative;
+}
+
+.heartBtn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.heartIcon {
+    width: 20px;
+    height: 20px;
+    fill: #f2f4f7;
+}
+
+.infoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.textContainer {
+    display: flex;
+    gap: 3px;
+    
+}
+
+.brandText {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #101828;
+}
+
+
+
+.modelText {
+    color: #3470ff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 110px;
+}
+
+.span {
+    color: #101828;
+    margin-left: 0;
+}
+
+.price {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #101828;
+    margin-left: auto;
+}
+
+.address {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8d929a;
+    display: flex; 
+    flex-wrap: wrap;
+    margin-top: 8px;
+    
+}
+
+.separator {
+    margin: 0 6px;
+    color: #8d929a;
+}
+
+.detailsRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8d929a;
+}
+
+.carType {
+
+}
+
+.mileage {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8d929a;
+}
+
+.btn {
+    border-radius: 12px;
+    padding: 12px 96px;
+    width: auto;
+    height: 44px;
+    background: #3470ff;
+    border: none;
+    display: flex;
+    align-items: center;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.btn:hover,
+.btn:focus {
+    background-color: #0b44cd;
+}
