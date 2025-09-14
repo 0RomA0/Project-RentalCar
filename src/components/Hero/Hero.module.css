@@ -1,5 +1,5 @@
 .container {
-    background-image: url("../../public/Picture\ 1x.jpg");
+    background-image: url("/Picture 1x.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@
 
 @media (min-resolution: 192dpi),(min-resolution: 2dppx) {
     .container {
-        background-image: url("../../public/Picture\ 2x.jpg");
+        background-image: url("/Picture 2x.jpg");
     }
 }
 

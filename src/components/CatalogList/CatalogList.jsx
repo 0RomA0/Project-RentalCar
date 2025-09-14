@@ -33,7 +33,7 @@ export default function CatalogList() {
     }
     };
     
-    if (cars.length === 0) {
+    if (!isLoading && cars.length === 0) {
         return <NotFoundCars/>
     }
 
