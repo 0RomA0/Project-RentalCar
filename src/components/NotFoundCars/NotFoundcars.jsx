@@ -1,6 +1,4 @@
-
-import style from "./NotFoundCars.module.css"
-
+import style from './NotFoundCars.module.css';
 
 export default function NotFoundCars() {
   return (
@@ -10,4 +8,3 @@ export default function NotFoundCars() {
     </div>
   );
 }
-

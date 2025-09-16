@@ -166,3 +166,9 @@
 .btn:hover {
     background-color: #0b44cd;
 }
+
+.btn:disabled {
+    background-color: #8d929a;
+    cursor: not-allowed;
+    opacity: 0.6;
+}

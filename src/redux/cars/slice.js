@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import { fetchCars, fetchCarById, loadMoreCars } from "./operations";
+import { fetchCars, fetchCarById } from './operations';
 
-const handlePending = state => {
+const handlePending = (state) => {
   state.isLoading = true;
 };
 
@@ -11,19 +11,18 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
-
 const carsSlice = createSlice({
-    name: "cars",
-    initialState: {
-        items: [],
-        isLoading: false,
-        error: null,
-        currentCar: null,
-        page: 1,
-        totalPages: null
-    },
+  name: 'cars',
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
+    currentCar: null,
+    page: 1,
+    totalPages: null,
+  },
 
-    reducers: {
+  reducers: {
     setPage: (state, { payload }) => {
       state.page = payload;
     },
@@ -33,36 +32,29 @@ const carsSlice = createSlice({
       state.totalPages = null;
     },
   },
-    extraReducers: builder => {
-        builder
-            .addCase(fetchCars.pending, handlePending)
-            .addCase(fetchCars.rejected, handleRejected)
-            .addCase(fetchCars.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.error = null;
-                state.items = action.payload.items;
-                state.page = action.payload.page;
-                state.totalPages = action.payload.totalPages;
-            })
-            .addCase(loadMoreCars.pending, handlePending)
-            .addCase(loadMoreCars.rejected, handleRejected)
-            .addCase(loadMoreCars.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.error = null;
-                state.items = [...state.items, ...action.payload.items]; 
-                state.page = action.payload.page;
-                state.totalPages = action.payload.totalPages;
-            })
-            .addCase(fetchCarById.pending, handlePending)
-            .addCase(fetchCarById.rejected, handleRejected)
-            .addCase(fetchCarById.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.error = null;
-                state.currentCar = action.payload;
-            })
-    }
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchCars.pending, handlePending)
+      .addCase(fetchCars.rejected, handleRejected)
+      .addCase(fetchCars.fulfilled, (state, action) => {
+        if (action.payload.page === 1) {
+          state.items = action.payload.items;
+        } else {
+          state.items = [...state.items, ...action.payload.items];
+        }
+        state.totalPages = action.payload.totalPages;
+        state.page = action.payload.page;
+        state.isLoading = false;
+      })
+      .addCase(fetchCarById.pending, handlePending)
+      .addCase(fetchCarById.rejected, handleRejected)
+      .addCase(fetchCarById.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.currentCar = action.payload;
+      });
+  },
 });
-
 
 export const { resetCars, setPage } = carsSlice.actions;
 

@@ -1,28 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-import { fetchBrands } from "./operations";
-
-const handlePending = state => {
-  state.isLoading = true;
-};
-
-const handleRejected = (state, action) => {
-  state.isLoading = false;
-  state.error = action.payload;
-};
-
+import { createSlice } from '@reduxjs/toolkit';
 
 const filtersSlice = createSlice({
-    name: "filters",
-    initialState: {
-        brand: "",
-        rentalPrice: "",
-        minMileage: "",
-        maxMileage: "",
-        brands: [],
-        isLoading: false,
-        error: null,
-    },
+  name: 'filters',
+  initialState: {
+    brand: '',
+    rentalPrice: '',
+    minMileage: '',
+    maxMileage: '',
+  },
 
   reducers: {
     setBrand: (state, action) => {
@@ -37,27 +22,14 @@ const filtersSlice = createSlice({
     setMileageTo: (state, action) => {
       state.maxMileage = action.payload;
     },
-      resetFilters: (state) => {
-          state.brand = "";
-          state.rentalPrice = "";
-          state.minMileage = "";
-          state.maxMileage = "";
+    resetFilters: (state) => {
+      state.brand = '';
+      state.rentalPrice = '';
+      state.minMileage = '';
+      state.maxMileage = '';
     },
   },
-    extraReducers: builder => {
-        builder
-            .addCase(fetchBrands.pending, handlePending)
-            .addCase(fetchBrands.rejected, handleRejected)
-            .addCase(fetchBrands.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.brands = action.payload;
-               
-            })
-            
-    }
 });
-
-
 
 export const {
   setBrand,
@@ -67,7 +39,4 @@ export const {
   resetFilters,
 } = filtersSlice.actions;
 
-
 export default filtersSlice.reducer;
-
-

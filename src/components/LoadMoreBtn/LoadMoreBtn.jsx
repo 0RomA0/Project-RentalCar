@@ -1,4 +1,4 @@
-import style from "./LoadMoreBtn.module.css";
+import style from './LoadMoreBtn.module.css';
 
 export default function LoadMoreBtn({ onClick, disabled }) {
   return (
@@ -6,8 +6,9 @@ export default function LoadMoreBtn({ onClick, disabled }) {
       type="button"
       disabled={disabled}
       onClick={onClick}
-          className={style.loadMoreBtn}>
-          {disabled ? "Loading..." : "Load More"}
+      className={style.loadMoreBtn}
+    >
+      {disabled ? 'Loading...' : 'Load More'}
     </button>
   );
 }

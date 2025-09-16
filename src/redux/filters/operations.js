@@ -1,17 +1,14 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import api from '../../constants/api';
 
-axios.defaults.baseURL = "https://car-rental-api.goit.global";
-
-
-
-
-export const fetchBrands = createAsyncThunk("filters/fetchBrands", async (_, thunkAPI) => {
+export const fetchBrands = createAsyncThunk(
+  'filters/fetchBrands',
+  async (_, thunkAPI) => {
     try {
-        const response = await axios.get("/brands");
-            return response.data;
+      const response = await api.get('/brands');
+      return response.data;
     } catch (e) {
-      
-        return thunkAPI.rejectWithValue(e.message);
+      return thunkAPI.rejectWithValue(e.message);
     }
-});
+  },
+);
